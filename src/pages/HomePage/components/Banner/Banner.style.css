@@ -1,0 +1,77 @@
+.banner {
+  height: 56vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.banner:before {
+  content: "";
+  background: linear-gradient(to right, black, transparent);
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 56vh;
+  width: 100%;
+}
+.banner img {
+  width: 100%;
+}
+.banner-text-area {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 2rem;
+}
+
+.banner-text-area > * {
+  z-index: 2;
+}
+
+.banner-text-area h1 {
+  font-size: 3rem;
+}
+.banner-text-area p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .banner {
+    height: 40vh;
+  }
+  .banner:before {
+    height: 40vh;
+  }
+  .banner-text-area {
+    width: 80%;
+  }
+  .banner-text-area h1 {
+    font-size: 2rem;
+  }
+  .banner-text-area p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    height: 35vh;
+  }
+  .banner:before {
+    height: 35vh;
+  }
+  .banner-text-area {
+    width: 100%;
+  }
+  .banner-text-area h1 {
+    font-size: 2rem;
+  }
+  .banner-text-area p {
+    font-size: 0.8rem;
+    margin-top: 10px;
+  }
+}
