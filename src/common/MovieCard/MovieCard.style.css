@@ -1,5 +1,5 @@
 .movie-card {
-  width: 300px;
+  width: 275px;
   height: 450px; /* Increased height for better aspect ratio */
   background-size: cover;
   background-position: center; /* Center the background image */
