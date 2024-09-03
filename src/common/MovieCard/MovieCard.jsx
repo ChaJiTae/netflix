@@ -2,7 +2,6 @@ import React from "react";
 import { Badge } from "react-bootstrap";
 import "./MovieCard.style.css";
 
-// Mapping of genre IDs to Korean names
 const genreMap = {
   28: "액션",
   12: "모험",

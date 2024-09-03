@@ -10,10 +10,25 @@
   height: 320px;
 }
 
-.popularMoviesTitle {
+.MoviesTitle {
   color: white;
   font-size: 50px;
   display: flex;
   justify-content: center;
   font-family: "Cafe24Ssurround";
+}
+
+@media (max-width: 600px) {
+  .carousel-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .MoviesTitle {
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    font-family: "Cafe24Ssurround";
+  }
 }
