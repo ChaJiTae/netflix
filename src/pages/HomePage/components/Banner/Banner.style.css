@@ -1,4 +1,12 @@
+@font-face {
+  font-family: "Cafe24Ssurround";
+  src: url("/src/fonts/Cafe24Ssurround-v2.0.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .banner {
+  font-family: "Cafe24Ssurround";
   height: 56vh;
   background-position: center;
   background-repeat: no-repeat;
