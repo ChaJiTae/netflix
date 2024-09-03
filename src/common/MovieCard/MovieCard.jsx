@@ -1,30 +1,18 @@
 import React from "react";
 import { Badge } from "react-bootstrap";
 import "./MovieCard.style.css";
-
-const genreMap = {
-  28: "액션",
-  12: "모험",
-  16: "애니메이션",
-  35: "코미디",
-  80: "범죄",
-  99: "다큐멘터리",
-  18: "드라마",
-  10751: "가족",
-  14: "판타지",
-  36: "역사",
-  27: "공포",
-  10402: "음악",
-  9648: "미스터리",
-  10749: "로맨스",
-  878: "SF",
-  10770: "TV 영화",
-  53: "스릴러",
-  10752: "전쟁",
-  37: "서부",
-};
+import { useMovieGenreQuery } from "../../hooks/useMovieGenre";
 
 export default function MovieCard({ movie }) {
+  const { data: genres } = useMovieGenreQuery();
+  const showGenre = (genreIdList) => {
+    if (!genres) return [];
+    const genresNameList = genreIdList.map((id) => {
+      const genreObj = genres.find((genre) => genre.id === id);
+      return genreObj.name;
+    });
+    return genresNameList;
+  };
   return (
     <div
       style={{
@@ -38,9 +26,9 @@ export default function MovieCard({ movie }) {
       <div className="overlay">
         <h1 className="movieCardTitle">{movie.title}</h1>
         <div className="genreSet">
-          {movie.genre_ids.map((id) => (
-            <Badge key={id} bg="danger">
-              {genreMap[id] || "알 수 없음"}
+          {showGenre(movie.genre_ids).map((genre, index) => (
+            <Badge bg="danger" key={index} className="me-1">
+              {genre}
             </Badge>
           ))}
         </div>
