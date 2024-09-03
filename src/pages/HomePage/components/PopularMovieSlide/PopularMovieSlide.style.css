@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Cafe24Ssurround";
+  src: url("/src/fonts/Cafe24Ssurround-v2.0.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.carousel-container {
+  overflow: hidden;
+  height: 320px;
+}
+
+.popularMoviesTitle {
+  color: white;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  font-family: "Cafe24Ssurround";
+}
