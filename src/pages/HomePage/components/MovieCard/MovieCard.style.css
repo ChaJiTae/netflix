@@ -1,25 +1,35 @@
 .movie-card {
   width: 300px;
-  height: 250px;
+  height: 450px; /* Increased height for better aspect ratio */
   background-size: cover;
+  background-position: center; /* Center the background image */
   cursor: pointer;
-  transition: 0.5s;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensure content doesn't overflow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a slight shadow */
 }
 
 .movieCardTitle {
-  font-family: "Cafe24Ssurround";
-  font-size: 25px;
+  font-family: "Cafe24Ssurround", sans-serif;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
-  background-color: rgba(43, 41, 41, 0.9);
+  background-color: rgba(0, 0, 0, 0.7); /* Slightly darker overlay */
   opacity: 0;
-  transition: all 1s;
+  transition: opacity 0.5s ease-in-out;
   color: white;
-  font-weight: bold;
-  overflow-wrap: break-word;
+  text-align: center; /* Center text */
+  padding: 20px; /* Padding for better spacing */
+  box-sizing: border-box; /* Include padding in width/height */
 }
 
 .overlay:hover {
@@ -27,6 +37,14 @@
 }
 
 .movie-card:hover {
-  transform: scale(1.3) translateZ(20px);
+  transform: scale(1.05); /* Adjust scale for smoother effect */
   z-index: 2;
+}
+
+.badge {
+  margin: 2px; /* Add slight spacing between badges */
+}
+
+.genreSet {
+  display: flex;
 }
