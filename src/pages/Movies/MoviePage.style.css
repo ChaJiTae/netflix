@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "Cafe24Ssurround";
+  src: url("/src/fonts/Cafe24Ssurround-v2.0.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.page-link {
+  background-color: black;
+  color: white;
+  transition: all 0.5s;
+}
+.page-link:hover {
+  background-color: #dc3545;
+  color: white;
+  font-size: 1.2rem;
+  transform: scale(1.01);
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+}
+
+.checkbox-container {
+  display: inline-block;
+  margin: 10px;
+  font-size: 1.5rem;
+}
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.noData {
+  font-size: 100px;
+  font-family: "Cafe24Ssurround";
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.spinner-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.checkbox-container {
+  display: flex;
+}
+
+.checkbox-label {
+  font-family: "Cafe24Ssurround";
+  color: white;
+}
